@@ -1,0 +1,74 @@
+[
+    {
+        "precio": "$15.00",
+        "id": 1,
+        "title": "Dulces",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/crunch.jpg"
+    },
+    {
+        "precio": "$25.00",
+        "id": 2,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/hershey.jpg"
+    },
+    {
+        "precio": "$10.00",
+        "id": 3,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/kitk.jpg"
+    },
+    {
+        "precio": "$5.00",
+        "id": 4,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/krank.png"
+    },
+    {
+        "precio": "$15.00",
+        "id": 5,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/maz.png"
+    },
+    {
+        "precio": "$10.00",
+        "id": 6,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/msm.jpg"
+    },
+    {
+        "precio": "$20.00",
+        "id": 7,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/nachos.jpg"
+    },
+    {
+        "precio": "$15.00",
+        "id": 8,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/oblea.jpg"
+    },
+    {
+        "precio": "$10.00",
+        "id": 9,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/rock.jpg"
+    },
+    {
+        "precio": "$15.00",
+        "id": 10,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/snickers.jpg"
+    },
+    {
+        "precio": "$10.00",
+        "id": 11,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/tict.png"
+    },
+    {
+        "precio": "$15.00",
+        "id": 12,
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/imagenes1/whooper.png"
+    }
+]
