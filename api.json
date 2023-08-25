@@ -1,74 +1,74 @@
 [
     {
-        "precio": "$15.00",
+        "precio": "15.00",
         "id": 1,
-        "title": "Crunch",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/crunch.jpg"
+        "title": "Dulces",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/1.jpg"
     },
     {
-        "precio": "$25.00",
+        "precio": "25.00",
         "id": 2,
-        "title": "Hershey",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/hershey.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/2.jpg"
     },
     {
-        "precio": "$10.00",
+        "precio": "10.00",
         "id": 3,
-        "title": "KitKat",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/kitk.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/3.jpg"
     },
     {
-        "precio": "$5.00",
+        "precio": "5.00",
         "id": 4,
-        "title": "Kranky",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/krank.png"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/4.png"
     },
     {
-        "precio": "$15.00",
+        "precio": "15.00",
         "id": 5,
-        "title": "Mazapan",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/maz.png"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/5.png"
     },
     {
-        "precio": "$10.00",
+        "precio": "10.00",
         "id": 6,
-        "title": "MsM",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/msm.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/6.jpg"
     },
     {
-        "precio": "$20.00",
+        "precio": "20.00",
         "id": 7,
-        "title": "Nachos",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/nachos.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/7.jpg"
     },
     {
-        "precio": "$15.00",
+        "precio": "15.00",
         "id": 8,
-        "title": "Obleas",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/oblea.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/8.jpg"
     },
     {
-        "precio": "$10.00",
+        "precio": "10.00",
         "id": 9,
-        "title": "Rock Candy",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/rock.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/9.jpg"
     },
     {
-        "precio": "$15.00",
+        "precio": "15.00",
         "id": 10,
-        "title": "Snickers",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/snickers.jpg"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/10.jpg"
     },
     {
-        "precio": "$10.00",
+        "precio": "10.00",
         "id": 11,
-        "title": "TicTac",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/tict.png"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/11.png"
     },
     {
-        "precio": "$15.00",
+        "precio": "15.00",
         "id": 12,
-        "title": "Whoopers",
-        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carrito.img/imagenes/whooper.png"
+        "title": "New",
+        "thumbnailUrl": "https://personajescreados.000webhostapp.com/carritos/carrito.img/imagenes/12.png"
     }
 ]
