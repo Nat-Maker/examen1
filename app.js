@@ -88,8 +88,6 @@ const setCarrito = objeto => {
 //  Object.values(carrito).forEach(producto => {
 const mostrarCarrito = () => {
     items.innerHTML = ''
-    const nuevoFragmento = document.createDocumentFragment(); // Crea un nuevo fragmento
-
     Object.values(carrito).forEach(producto => {
         templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.title
@@ -99,10 +97,9 @@ const mostrarCarrito = () => {
         templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
 
         const cloneProducto = templateCarrito.cloneNode(true)
-        nuevoFragmento.appendChild(cloneProducto) // Agrega el clon al nuevo fragmento
+        fragmento.appendChild(cloneProducto)
     })
-
-    items.appendChild(nuevoFragmento) // Agrega el nuevo fragmento al items
+    items.appendChild(fragmento)
     mostrarFooter()
 }
 
