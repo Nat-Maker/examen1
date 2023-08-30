@@ -5,23 +5,23 @@ const footer = document.getElementById('footer')
 
 const templateCard = document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
-const templateCarrito = document.getElementById('template-Carrito').content
+const templateFlor = document.getElementById('template-flor').content
 
 // -------------------- CREACION DEL OBJETO CARRITO VACIO
 
-let carrito = {}
+let flor = {}
 
 // ------------ 
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
-    //console.log(data)
+    console.log(data)
 })
 
 // ---------------- EVENTO ON CLICK
 
 cards.addEventListener('click', e => {
-    addCarrito(e)
+    addFlor(e)
 })
 
 items.addEventListener('click', e => {
@@ -42,19 +42,10 @@ const fetchData = async () => {
     }
 }
 
-//------------------------------------ METODO MOSTRAR PRODUCTOS
-// let data = []; // Define la variable data a nivel global
-
-// ...
-
-/* document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
-}); */
-
 const mostrarProductos = data => {
-    //console.log(data)
     data.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.title
+        templateCard.querySelectorAll('h6').textContent = producto.sign
         templateCard.querySelector('p').textContent = producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.thumbnailUrl)
         templateCard.querySelector('.btn-dark').dataset.id = producto.id
@@ -68,40 +59,39 @@ const mostrarProductos = data => {
 
 //--------------- DAR SALIDA AL CARRITO
 
-const addCarrito = e => {
+const addFlor = e => {
     if (e.target.classList.contains('btn-dark')) {
-        setCarrito(e.target.parentElement)
+        setFlor(e.target.parentElement)
     }
     e.stopPropagation()
 }
 
-const setCarrito = objeto => {
-    //console.log(objeto)
+const setFlor = objeto => {
     const producto = {
         id: objeto.querySelector('.btn-dark').dataset.id,
         title: objeto.querySelector('h5').textContent,
+        sign: objeto.querySelector('h6').textContent,
         precio: objeto.querySelector('p').textContent,
         cantidad: 1
     }
-    if (carrito.hasOwnProperty(producto.id)) {
-        producto.cantidad = carrito[producto.id].cantidad + 1
+    if (flor.hasOwnProperty(producto.id)) {
+        producto.cantidad = flor[producto.id].cantidad + 1
     }
-    carrito[producto.id] = { ...producto }
-    mostrarCarrito()
+    flor[producto.id] = { ...producto }
+    mostrarFlor()
 }
-//  Object.values(carrito).forEach(producto => {
-const mostrarCarrito = () => {
-    //console.log(carrito)
+const mostrarFlor = () => {
     items.innerHTML = ''
-    Object.values(carrito).forEach(producto => {
-        templateCarrito.querySelector('th').textContent = producto.id
-        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
-        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
-        templateCarrito.querySelector('.btn-info').dataset.id = producto.id
-        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
-        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+    Object.values(flor).forEach(producto => {
+        templateFlor.querySelector('th').textContent = producto.id
+        templateFlor.querySelectorAll('td')[0].textContent = producto.title
+        templateFlor.querySelectorAll('th').textContent = producto.sign
+        templateFlor.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateFlor.querySelector('.btn-info').dataset.id = producto.id
+        templateFlor.querySelector('.btn-danger').dataset.id = producto.id
+        templateFlor.querySelector('span').textContent = producto.cantidad * producto.precio
 
-        const cloneProducto = templateCarrito.cloneNode(true)
+        const cloneProducto = templateFlor.cloneNode(true)
         fragmento.appendChild(cloneProducto)
     })
     items.appendChild(fragmento)
@@ -112,14 +102,13 @@ const mostrarCarrito = () => {
 
 const mostrarFooter = () => {
     footer.innerHTML = '';
-    if (Object.keys(carrito).length === 0) {
-        footer.innerHTML = '<th scope="row" colspan="5"> Carrito Vacio - Comience a Comprar</th>';
+    if (Object.keys(flor).length === 0) {
+        footer.innerHTML = '<th scope="row" colspan="6"> ¿Nada que comprar? Vuelve a revisar!</th>';
         return
     }
-    const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
-    const nPrecio = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
+    const nCantidad = Object.values(flor).reduce((acc, { cantidad }) => acc + cantidad, 0)
+    const nPrecio = Object.values(flor).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
 
-    //console.log(nPrecio)
 
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad
     templateFooter.querySelector('span').textContent = nPrecio
@@ -130,8 +119,8 @@ const mostrarFooter = () => {
 
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () => {
-        carrito = {}
-        mostrarCarrito()
+        flor = {}
+        mostrarFlor()
     })
 }
 
@@ -140,19 +129,19 @@ const mostrarFooter = () => {
 const btnAccion = e => {
     console.log(e.target);
     if (e.target.classList.contains('btn-info')) {
-        const producto = carrito[e.target.dataset.id];
+        const producto = flor[e.target.dataset.id];
         producto.cantidad++;
-        carrito[e.target.dataset.id] = { ...producto };
-        mostrarCarrito();
+        flor[e.target.dataset.id] = { ...producto };
+        mostrarFlor();
     } else if (e.target.classList.contains('btn-danger')) {
-        const producto = carrito[e.target.dataset.id];
+        const producto = flor[e.target.dataset.id];
         if (producto.cantidad === 0) {
-            delete carrito[e.target.dataset.id];
+            delete flor[e.target.dataset.id];
         } else {
             producto.cantidad--;
-            carrito[e.target.dataset.id] = { ...producto };
+            flor[e.target.dataset.id] = { ...producto };
         }
-        mostrarCarrito();
+        mostrarFlor();
     }
     e.stopPropagation();
 };
